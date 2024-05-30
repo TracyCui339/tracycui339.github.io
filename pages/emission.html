@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emission Analysis</title>
+    <link rel="stylesheet" href="/css/emission-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation"></script>
+    <script src="/js/emission-script.js" defer></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="instrumentinfo.html">Instrument Information</a></li>
+                    <li><a href="vesselinfo.html">Vessel Information</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Analysis Demo</a>
+                        <div class="dropdown-content">
+                            <a href="operation.html">Operation Profile</a>
+                            <a href="emission.html">Emission Measurement</a>
+                            <a href="energy.html">Energy Consumption</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <a class="contact-button" href="contact.html">Contact Us</a>
+        </header>
+
+        <main>
+            <!-- Section for the introduction -->
+            <section class="intro-section">
+                <h2>Emission Performance</h2>
+                <p>Stay informed with data and insights on vessel performance and emissions.</p>
+            </section>
+
+            <!-- Section with image -->
+            <section class="image-section">
+                <h2>Power & CO2 Emissions</h2>
+                <p>This section shows different operation modes for the 3 different DGs with average power and CO2 emission.<br>
+                    The results show that CO2 emission will increase with higher power usage.
+                </p>
+                <div class="image-container">
+                    <div class="info-box" id="box1">
+                        <div class="icon-container">
+                            <img src="/images/power-icon.png" alt="Icon 1">
+                        </div>
+                        <div class="text-container">
+                            <p>DG Power Emission</p>
+                        </div>
+                    </div>
+                    <div class="info-box" id="box2">
+                        <div class="icon-container">
+                            <img src="/images/co2-icon.png" alt="Icon 2">
+                        </div>
+                        <div class="text-container">
+                            <p>CO2 Emission</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-display" id="imageDisplay"></div>
+            </section>
+
+            <!-- Section for the Emission Analysis -->
+            <section class="emission-analysis-section">
+                <h2>Emission Analysis for Different Operation Mode</h2>
+                <div class="emission-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th rowspan="2">Engine</th>
+                                <th colspan="2">Engine Off</th>
+                                <th colspan="2">Idling</th>
+                                <th colspan="2">Cargo</th>
+                                <th colspan="2">Transit</th>
+                            </tr>
+                            <tr>
+                                <th>STBD</th>
+                                <th>PORT</th>
+                                <th>STBD</th>
+                                <th>PORT</th>
+                                <th>STBD</th>
+                                <th>PORT</th>
+                                <th>STBD</th>
+                                <th>PORT</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Main Engine</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>121.4</td>
+                                <td>122.21</td>
+                                <td>139.93</td>
+                                <td>-</td>
+                                <td>634.66</td>
+                                <td>573.07</td>
+                            </tr>
+                            <tr>
+                                <td>Measured Time (min)</td>
+                                <td>1516</td>
+                                <td>2499</td>
+                                <td>449</td>
+                                <td>385</td>
+                                <td>918</td>
+                                <td>-</td>
+                                <td>244</td>
+                                <td>244</td>
+                            </tr>
+                            <tr>
+                                <td>Average Main Engine Load kW (% of load)</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>121.4</td>
+                                <td>122.21</td>
+                                <td>139.93</td>
+                                <td>-</td>
+                                <td>634.66</td>
+                                <td>573.07</td>
+                            </tr>
+                            <tr>
+                                <td>Average RPM</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>398.55</td>
+                                <td>402.03</td>
+                                <td>430.05</td>
+                                <td>-</td>
+                                <td>692.2</td>
+                                <td>670.75</td>
+                            </tr>
+                            <tr>
+                                <td>Engine in Operation</td>
+                                <td>Aux Engine</td>
+                                <td>-</td>
+                                <td>Main + Aux Engine</td>
+                                <td>-</td>
+                                <td>STBD + Aux Engine</td>
+                                <td>-</td>
+                                <td>Main + Aux Engine</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>CO2 per Hour (kg/h)</td>
+                                <td>86.46</td>
+                                <td>-</td>
+                                <td>368.82</td>
+                                <td>-</td>
+                                <td>239.12</td>
+                                <td>-</td>
+                                <td>1123.57</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>NOx per Hour (kg/h)</td>
+                                <td>0.36</td>
+                                <td>-</td>
+                                <td>4.71</td>
+                                <td>-</td>
+                                <td>3.08</td>
+                                <td>-</td>
+                                <td>14.82</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>CO per Hour (kg/h)</td>
+                                <td>0.15</td>
+                                <td>-</td>
+                                <td>5.84</td>
+                                <td>-</td>
+                                <td>2.64</td>
+                                <td>-</td>
+                                <td>7.68</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>Average Vessel Speed (knots)</td>
+                                <td colspan="8">8.5</td>
+                            </tr>
+                            <tr>
+                                <td>Total Distance Travelled (NM)</td>
+                                <td colspan="8">34.56</td>
+                            </tr>
+                            <tr>
+                                <td>CO2 per Distance (kg/NM)</td>
+                                <td colspan="8">132.06</td>
+                            </tr>
+                            <tr>
+                                <td>NOx per Distance (kg/NM)</td>
+                                <td colspan="8">1.74</td>
+                            </tr>
+                            <tr>
+                                <td>CO per Distance (kg/NM)</td>
+                                <td colspan="8">0.9</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="emission-info">
+                    
+                    <p>Excludes Aux Engines (DGs): 
+                        When the Main Engine is not in operation, Engine Load and RPM will be zero.<br>
+                        Includes Aux Engines (DGs): 
+                        Transit mode is the only operation where the vessel is consistently moving.
+                    </p>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="instrumentinfo.html">Instrument Information</a></li>
+                    <li><a href="vesselinfo.html">Vessel Information</a></li>
+                    <li><a href="operation.html">Analysis Demo</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.ntu.edu.sg/mesd-coe"><img src="/images/MESD.png" alt="Mesd"></a>
+                <a href="https://www.linkedin.com/company/mesd-coe"><img src="/images/linkedin.png" alt="Linkedin"></a>
+                <a href="https://x.com/ntusg"><img src="/images/twitter.png" alt="Twitter"></a>
+                <a href="https://www.facebook.com/NTUsg/"><img src="/images/facebook.png" alt="Facebook"></a>
+                <a href="https://www.youtube.com/user/NTUsg"><img src="/images/youtube.png" alt="Youtube"></a>
+            </div>
+            <p>&copy; 2024 MESD. All Rights Reserved.</p>
+        </footer>
+    </div>
+</body>
+
+</html>

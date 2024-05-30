@@ -1,0 +1,329 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrapper {
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1200px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 40px;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+    backdrop-filter: blur(10px);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+
+.dropdown {
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #333; /* Dark gray text color */
+    padding: 10px 16px; /* Adjusted padding */
+    text-decoration: none;
+    display: block;
+    font-size: 12px; /* Smaller font size */
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.contact-button {
+    background-color: #3d3972;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 40px 40px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Intro section styling */
+.intro-section {
+    margin-bottom: 40px;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background: url('/images/operation-background.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.intro-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 38, 77, 0.6); /* 深蓝色蒙版 */
+}
+
+.intro-section h1,
+.intro-section h2,
+.intro-section p {
+    position: relative;
+    z-index: 1;
+    color: white; /* 白色文字 */
+}
+
+.intro-section h1 {
+    font-size: 24px;
+    margin: 0;
+    color: #FFD700;
+}
+
+.intro-section h2 {
+    font-size: 42px;
+    margin: 10px 0;
+}
+
+.intro-section p {
+    font-size: 13px;
+}
+
+/* Image section styling */
+.image-section {
+    width: 100%;
+    text-align: left; /* 修改为左对齐 */
+    margin-bottom: 40px;
+}
+
+.image-section h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.image-section p {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.image-container {
+    display: flex;
+    justify-content: flex-start; /* 修改为左对齐 */
+    width: 100%;
+    max-width: 800px;
+    margin: 0;
+    gap: 20px; /* 增加间距 */
+}
+
+.info-box {
+    width: 20%; /* 减小宽度 */
+    background-color: #99a8bb;
+    padding: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: 1px solid #ddd; 
+}
+
+.info-box:hover {
+    background-color: #667f8f;
+}
+
+.info-box.active {
+    background-color: #3d3972;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.icon-container img {
+    width: 30px;
+    height: 30px;
+}
+
+.text-container {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+
+.text-container p {
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.image-display {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+}
+
+.image-display img {
+    width: 45%; 
+    margin: 0 1%;
+}
+
+/* Emission Analysis section styling */
+.emission-analysis-section {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.emission-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.emission-table {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.emission-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+.emission-table th, .emission-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.emission-table th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+.emission-table td {
+    color: #666;
+}
+
+.emission-info-title {
+    margin-top: 40px; /* Adjust spacing above the title */
+    margin-bottom: 20px; /* Adjust spacing below the title */
+}
+
+.emission-info {
+    width: 100%;
+    text-align: center;
+    padding-top: 0px;
+}
+
+.emission-info p {
+    font-size: 13px;
+    color: #666;
+    line-height: 2;
+}
+
+/* Footer styles */
+footer {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-nav ul li {
+    margin: 0 15px;
+}
+
+.footer-nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+
+.footer-social {
+    margin: 20px 0;
+}
+
+.footer-social a {
+    margin: 0 10px;
+}
+
+.footer-social img {
+    width: 24px;
+    height: 24px;
+}
+
+footer p {
+    font-size: 12px;
+    color: #666;
+}

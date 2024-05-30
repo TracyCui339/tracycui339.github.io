@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operation Profile</title>
+    <link rel="stylesheet" href="/css/operation-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation"></script>
+    <script src="/js/script.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="instrumentinfo.html">Instrument Information</a></li>
+                    <li><a href="vesselinfo.html">Vessel Information</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Analysis Demo</a>
+                        <div class="dropdown-content">
+                            <a href="operation.html">Operation Profile</a>
+                            <a href="emission.html">Emission Measurement</a>
+                            <a href="energy.html">Energy Consumption</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <a class="contact-button" href="contact.html">Contact Us</a>
+        </header>
+
+        <main>
+            <!-- Section for the introduction -->
+            <section class="intro-section">
+                
+                <h2>Operation Profile</h2>
+                <p>Stay informed with data and insights on vessel performance and emissions.</p>
+            </section>
+
+            <!-- Section for the table -->
+            <section class="table-section">
+                <h2>Operation Overview</h2>
+                <p>The analysis will be broken down into 4 engine modes.<br>
+                    Categorization of engine mode is dependent on the main engine operation, RPM, and its consistency in status.<br>
+                    The operation duration for 7 days from 17th - 23rd  November 2022.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Engine Mode</th>
+                            <th>Main Engine Running</th>
+                            <th>RPM</th>
+                            <th>STBD mins</th>
+                            <th>PT mins</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Engine Off</td>
+                            <td>Either or Both</td>
+                            <td>Zero</td>
+                            <td>4855 (80.9 hours)</td>
+                            <td>8219 (137 hours)</td>
+                        </tr>
+                        <tr>
+                            <td>Idling</td>
+                            <td>Either or Both</td>
+                            <td>419 - 422</td>
+                            <td>1329 (22.1 hours)</td>
+                            <td>1174 (19.5 hours)</td>
+                        </tr>
+                        <tr>
+                            <td>Cargo</td>
+                            <td>Only Either One</td>
+                            <td>430 - 432</td>
+                            <td>3209 (53.5 hours)</td>
+                            <td>–</td>
+                        </tr>
+                        <tr>
+                            <td>Transit</td>
+                            <td>Both</td>
+                            <td>420 and above</td>
+                            <td>686 (11.4 hours)</td>
+                            <td>–</td>
+                        </tr>
+                        <tr>
+                            <td>Total - mins</td>
+                            <td></td>
+                            <td></td>
+                            <td>10079 (168 hours)</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Section for the line chart -->
+            <section class="chart-section">
+                <h2>RPM and Speed Monitoring</h2>
+                <div class="chart-container">
+                    <canvas id="operationChart"></canvas>
+                </div>
+                <div class="chart-info">
+                    <h3>Operation Information</h3>
+                    <p>The figure shows the comparison of GPS speed and STBD RPM on 22 Nov 2022.</p>
+                    <p>The speed recorded in the GPS is accurate with Main Engine RPM.</p>
+                    <p>Main Engine typically operates cargo at 430 RPM and transit up to 750 RPM.</p>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="instrumentinfo.html">Instrument Information</a></li>
+                    <li><a href="vesselinfo.html">Vessel Information</a></li>
+                    <li><a href="operation.html">Analysis Demo</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.ntu.edu.sg/mesd-coe"><img src="/images/MESD.png" alt="Mesd"></a>
+                <a href="https://www.linkedin.com/company/mesd-coe"><img src="/images/linkedin.png" alt="Linkedin"></a>
+                <a href="https://x.com/ntusg"><img src="/images/twitter.png" alt="Twitter"></a>
+                <a href="https://www.facebook.com/NTUsg/"><img src="/images/facebook.png" alt="Facebook"></a>
+                <a href="https://www.youtube.com/user/NTUsg"><img src="/images/youtube.png" alt="Youtube"></a>
+            </div>
+            <p>&copy; 2024 MESD. All Rights Reserved.</p>
+        </footer>
+    </div>
+</body>
+
+</html>

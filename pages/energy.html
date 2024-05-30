@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Consumption</title>
+    <link rel="stylesheet" href="/css/energy-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="instrumentinfo.html">Instrument Information</a></li>
+                    <li><a href="vesselinfo.html">Vessel Information</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Analysis Demo</a>
+                        <div class="dropdown-content">
+                            <a href="operation.html">Operation Profile</a>
+                            <a href="emission.html">Emission Measurement</a>
+                            <a href="energy.html">Energy Consumption</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <a class="contact-button" href="contact.html">Contact Us</a>
+        </header>
+
+        <main>
+            <!-- Section for the introduction -->
+            <section class="intro-section">
+                <h2>Energy Performance</h2>
+                <p>Stay informed with data and insights on vessel performance and emissions.</p>
+            </section>
+
+            <!-- Section for the SFOC Profile -->
+            <section class="sfoc-section">
+                <h2>Specific Fuel Oil Consumption Profile</h2>
+                <div class="sfoc-container">
+                    <div class="sfoc-image">
+                        <img src="/images/sfoc_profile.png" alt="SFOC Profile">
+                    </div>
+                    <div class="sfoc-text">
+                        <p>SFOC profile for manufacturer’s baseline, actual operational profile in Nov 2022 and May 2023.</p>
+                        <p>Shows gradual increment of SFOC profile over a period of use.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section for validation of fuel consumption -->
+            <section class="validation-section">
+                <h2>Validation of Fuel Consumption</h2>
+                <div class="features-container">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <img src="/images/funclogo1.png" alt="Energy Efficient Tools">
+                        </div>
+                        <div class="feature-text">
+                            <h3>Data Collection</h3>
+                            <p>Collect the data for Engine Run hours, Cargo Pump hours, and fuel consumption (noon report)</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <img src="/images/funclogo2.png" alt="Emission Measurement Systems">
+                        </div>
+                        <div class="feature-text">
+                            <h3>Data Preprocessing</h3>
+                            <p>Use regression to obtain the variable for theoretical calculation.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <img src="/images/funclogo3.png" alt="Comprehensive Monitoring">
+                        </div>
+                        <div class="feature-text">
+                            <h3>Data Analysis</h3>
+                            <p>Compare the fuel consumption from noon report with the theoretical calculation.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section for the fuel consumption comparison -->
+            <section class="fuel-comparison-section">
+                <h2>Fuel Consumption Comparison</h2>
+                <div class="chart-container">
+                    <canvas id="fuelChart" width="1000" height="400"></canvas>
+                </div>
+                <div class="chart-info">
+                    <p>The theoretical daily fuel and the daily fuel match especially in November 2022.</p>
+                    <p>In May 2023, the theoretical value dips slightly due to the increase of SFOC because of period of use.</p>
+                </div>
+            </section>
+
+            <!-- Section for the DG Power Usage -->
+            <section class="dg-power-usage-section">
+                <h2>DG Power Usage</h2>
+                <div class="chart-container">
+                    <canvas id="dgPowerChart" width="1000" height="400"></canvas>
+                </div>
+                <div class="chart-info">
+                    <p>The figure shows the 3 DGs power profile, namely DG1, DG2 and DG3</p>
+                    <p>During operations, mostly only 2 DGs are running with 1 DG running at a constant load.</p>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="instrumentinfo.html">Instrument Information</a></li>
+                    <li><a href="vesselinfo.html">Vessel Information</a></li>
+                    <li><a href="operation.html">Analysis Demo</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.ntu.edu.sg/mesd-coe"><img src="/images/MESD.png" alt="Mesd"></a>
+                <a href="https://www.linkedin.com/company/mesd-coe"><img src="/images/linkedin.png" alt="Linkedin"></a>
+                <a href="https://x.com/ntusg"><img src="/images/twitter.png" alt="Twitter"></a>
+                <a href="https://www.facebook.com/NTUsg/"><img src="/images/facebook.png" alt="Facebook"></a>
+                <a href="https://www.youtube.com/user/NTUsg"><img src="/images/youtube.png" alt="Youtube"></a>
+            </div>
+            <p>&copy; 2024 MESD. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+    <script src="/js/energy-script.js"></script>
+</body>
+
+</html>
