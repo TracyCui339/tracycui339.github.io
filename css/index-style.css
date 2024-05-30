@@ -143,6 +143,7 @@ main {
     margin-bottom: 30px;
     opacity: 0;
     transition: opacity 1s ease-in-out;
+    line-height: 1.5;
 }
 
 .button-container {
