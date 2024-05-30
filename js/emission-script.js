@@ -4,11 +4,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const imageDisplay = document.getElementById('imageDisplay');
 
     box1.addEventListener('click', () => {
-        toggleImage('images/power-emissions.jpg', box1);
+        toggleImage('/images/power-emissions.jpg', box1);
     });
 
     box2.addEventListener('click', () => {
-        toggleImage('images/CO2-emissions.jpg', box2);
+        toggleImage('/images/CO2-emissions.jpg', box2);
     });
 
     function toggleImage(imageSrc, box) {
