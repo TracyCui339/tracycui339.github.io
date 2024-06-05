@@ -7,9 +7,11 @@
     <title>Operation Profile</title>
     <link rel="stylesheet" href="/css/operation-style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation"></script>
-    <script src="/js/script.js"></script>
+    <script src="/js/operation-script.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </head>
 
 <body>
@@ -36,7 +38,6 @@
         <main>
             <!-- Section for the introduction -->
             <section class="intro-section">
-                
                 <h2>Operation Profile</h2>
                 <p>Stay informed with data and insights on vessel performance and emissions.</p>
             </section>
@@ -108,6 +109,33 @@
                     <p>The figure shows the comparison of GPS speed and STBD RPM on 22 Nov 2022.</p>
                     <p>The speed recorded in the GPS is accurate with Main Engine RPM.</p>
                     <p>Main Engine typically operates cargo at 430 RPM and transit up to 750 RPM.</p>
+                </div>
+            </section>
+
+            <!-- Section for the route map -->
+            <section class="map-section">
+                <h2>Route Map Demo</h2>
+                <p>This map demo shows the vessel route and operation information.</p>
+                <div class="map-container">
+                    <div id="map" class="map"></div>
+                    <div class="data-container">
+                        <div class="data-item">
+                            <h3>Current Datetime</h3>
+                            <p id="current-datetime">-</p>
+                        </div>
+                        <div class="data-item">
+                            <h3>GPS Speed (knot)</h3>
+                            <p id="current-speed">-</p>
+                        </div>
+                        <div class="data-item">
+                            <h3>Mode</h3>
+                            <p id="current-mode">-</p>
+                        </div>
+                        <div class="button-container">
+                            <button id="start-btn">Start Tracking</button>
+                            <button id="stop-btn">Stop Tracking</button>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>
