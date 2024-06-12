@@ -126,11 +126,11 @@ document.addEventListener("DOMContentLoaded", () => {
                         let line = lines[i].split(',');
                         if (line.length < 6) continue; // assuming Mode is the 6th column
                         let datetime = line[0].trim();
-                        let lat = parseFloat(line[2].trim());
-                        let lng = parseFloat(line[3].trim());
-                        let speed = parseFloat(line[1].trim());
-                        let rpm = parseFloat(line[4].trim());
-                        let mode = line[5].trim();
+                        let lat = parseFloat(line[3].trim());
+                        let lng = parseFloat(line[4].trim());
+                        let speed = parseFloat(line[2].trim());
+                        let rpm = parseFloat(line[5].trim());
+                        let mode = line[6].trim();
                         routeData.push([lat, lng, speed, datetime, rpm, mode]);
                     }
                 })
@@ -250,7 +250,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         window.addEventListener('resize', resizeMap);
-        setTimeout(resizeMap, 1000); // Give some time for the map to render correctly
+        setTimeout(resizeMap, 1000); 
     }
 
     initializeMap();

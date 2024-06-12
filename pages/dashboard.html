@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emission Analysis</title>
+    <link rel="stylesheet" href="/css/dashboard-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="/js/dashboard-script.js" defer></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="instrumentinfo.html">Instrument Information</a></li>
+                    <li><a href="vesselinfo.html">Vessel Information</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Analysis Demo</a>
+                        <div class="dropdown-content">
+                            <a href="operation.html">Operation Profile</a>
+                            <a href="emission.html">Emission Measurement</a>
+                            <a href="energy.html">Energy Consumption</a>
+                        </div>
+                    </li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                </ul>
+            </nav>
+            <a class="contact-button" href="contact.html">Contact Us</a>
+        </header>
+
+        <main>
+            <div class="container">
+                <div class="main-title">
+                    <h1>EEPM Dashboard Demo</h1>
+                </div>
+                <div class="middle-container">
+                    <div id="map" class="box1"></div>
+                    <div class="box-container">
+                        <div id="datetime" class="small-box box1">
+                            <div class="small-box-title">Time</div>
+                            <div class="small-box-value">--</div>
+                        </div>
+                        <div id="gps" class="small-box box2">
+                            <div class="small-box-title">Location</div>
+                            <div class="small-box-value">--</div>
+                        </div>
+                        <div id="mode" class="small-box box3">
+                            <div class="small-box-title">Mode</div>
+                            <div class="small-box-value">--</div>
+                        </div>
+                    </div>
+                    <div class="box3">
+                        <div class="top-buttons">
+                            <label for="vessel-info">Vessel Information</label>
+                            <button id="vessel-info" class="control-button">Cosmos Citrine</button>
+                            <label for="instrument-system">Instruments</label>
+                            <button id="instrument-system" class="control-button">EEPM System</button>
+                        </div>
+                        <div class="bottom-buttons">
+                            <button id="start-tracking" class="control-button">Start Tracking</button>
+                            <button id="stop-tracking" class="control-button">Stop Tracking</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-container">
+                    <div class="bottom-box" id="operation-profile">
+                        <h3 class="chart-title">Operation Monitoring</h3>
+                        <canvas id="operationChart"></canvas>
+                    </div>
+                    <div class="bottom-box" id="energy-profile">
+                        <h3 class="chart-title">Energy Monitoring</h3>
+                        <canvas id="energyChart"></canvas>
+                    </div>
+                    <div class="bottom-box" id="emission-profile">
+                        <h3 class="chart-title">Emission Monitoring</h3>
+                        <canvas id="emissionChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal for Vessel Information -->
+            <div id="vesselModal" class="modal">
+                <div class="modal-content">
+                    <span class="close-button">&times;</span>
+                    <div class="modal-container">
+                        <div class="left-container">
+                            <img src="/images/vessel.jpg" alt="Vessel Image">
+                        </div>
+                        <div class="right-container">
+                            <p><strong>Vessel Name: KOSMOS CITRINE</strong></p>
+                            <p>IMO No: IMO 9650509</p>
+                            <p>HC License No: SB 0711 Z</p>
+                            <p>Gross Tonnage: 4557</p>
+                            <p>Main Engine: MAN B&W 1280 kW x2 sets</p>
+                            <p>Diesel Generators: x3 sets</p>
+                            <p>Fuel Type: MGO</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal for EEPM System -->
+            <div id="eppmModal" class="modal">
+                <div class="modal-content">
+                    <span class="close-button">&times;</span>
+                    <div class="modal-container">
+                        <div class="left-container">
+                            <img src="/images/precision_sensor.jpg" alt="EEPM System Image">
+                        </div>
+                        <div class="right-container">
+                            <p><strong>No of EEPM Instruments Deployed</strong></p>
+                            <p>Flow Meter: 2 sets</p>
+                            <p>Shaft Power Meter: 2 sets</p>
+                            <p>E Power Analyzer: 3 sets</p>
+                            <p>GPS: 1 set</p>
+                            <p>Gas Analyzer: 2 sets</p>
+                            <p>Temp & RH Meter: 2 sets</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="instrumentinfo.html">Instrument Information</a></li>
+                    <li><a href="vesselinfo.html">Vessel Information</a></li>
+                    <li><a href="operation.html">Analysis Demo</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.ntu.edu.sg/mesd-coe"><img src="/images/MESD.png" alt="Mesd"></a>
+                <a href="https://www.linkedin.com/company/mesd-coe"><img src="/images/linkedin.png" alt="Linkedin"></a>
+                <a href="https://x.com/ntusg"><img src="/images/twitter.png" alt="Twitter"></a>
+                <a href="https://www.facebook.com/NTUsg/"><img src="/images/facebook.png" alt="Facebook"></a>
+                <a href="https://www.youtube.com/user/NTUsg"><img src="/images/youtube.png" alt="Youtube"></a>
+            </div>
+            <p>&copy; 2024 MESD. All Rights Reserved.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
+

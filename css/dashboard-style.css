@@ -1,0 +1,421 @@
+/* dashboard-style.css */
+
+@font-face {
+    font-family: 'Baskervville';
+    src: url('/font/Baskervville-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f6f8fa;
+}
+
+.wrapper {
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1200px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 40px;
+    background-color: #f6f8fa;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+    backdrop-filter: blur(10px);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+
+.dropdown {
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 12px;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.contact-button {
+    background-color: #3d3972;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 40px 40px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.main-title {
+    width: 100%;
+    text-align: left;
+}
+
+.main-title h1 {
+    margin-bottom: 20px;
+    font-family: 'Baskervville', serif;
+    font-size: 24px; 
+}
+
+.middle-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px; 
+}
+
+.box1, .box3, .small-box, .bottom-box {
+    background-color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box1 {
+    width: 58%; 
+    height: 250px; 
+    margin-right: 2%; 
+}
+
+.box3 {
+    width: 38%; 
+    height: 230px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+    position: relative; 
+}
+
+.box3 .top-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.box3 .bottom-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.box-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 38%; 
+    height: calc(80px * 3 + 20px);  
+    margin-right: 2%; 
+}
+
+.small-box {
+    width: 100%; 
+    height: 80px;  
+    margin-bottom: 10px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box; 
+    padding: 0;  
+    position: relative; 
+}
+
+.small-box-title {
+    position: absolute;
+    top: 15px;
+    left: 18px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style:normal;
+    font-size: 13px;
+    line-height: 14px;
+    color: #474545;
+}
+
+.small-box-value {
+    position: absolute;
+    top: 35px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 15px;
+    color: #474545;
+}
+
+.small-box.box1 {
+    background-color: #e5ecf6;
+}
+
+.small-box.box2 {
+    background-color: #e5ecf6;
+}
+
+.small-box.box3 {
+    background-color: #e5ecf6;
+}
+
+.bottom-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.bottom-box {
+    width: 32%;
+    height: 200px; 
+    margin-right: 2%; 
+    position: relative;  
+    padding: 10px; 
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.bottom-box h3.chart-title {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px 0px 10px 10px; 
+    font-size: 14px; 
+    font-weight: normal;
+    text-align: left; 
+    width: 100%;
+    color:#333
+}
+
+.bottom-box:last-child {
+    margin-right: 0;
+}
+
+.box1:hover, .box3:hover, .small-box:hover, .bottom-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    width: 100%;
+    background-color: #f6f8fa;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-nav ul li {
+    margin: 0 15px;
+}
+
+.footer-nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+
+.footer-social {
+    margin: 20px 0;
+}
+
+.footer-social a {
+    margin: 0 10px;
+}
+
+.footer-social img {
+    width: 24px;
+    height: 24px;
+}
+
+footer p {
+    font-size: 12px;
+    color: #666;
+}
+
+.control-button {
+    display: block;
+    width: 120px;
+    padding: 10px;
+    background-color: #3d3972;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.control-button:hover {
+    background-color: #2e2a5a;
+}
+
+/* Vessel Information and Instrument System button styles */
+#vessel-info, #instrument-system {
+    width: 100%;
+    height: 35px;
+    border: 0.6px solid #979797;
+    border-radius: 17px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 11px;
+    color: #202224;
+    background-color: transparent;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 0;
+    transition: background-color 0.4s ease, font-size 0.4s ease, transform 0.4s ease; 
+}
+
+#vessel-info:hover, #instrument-system:hover {
+    background-color: #3d3972; 
+    color: #fff; 
+    transform: scale(1.05);
+}
+
+
+/* Modal styles */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+}
+
+.close-button {
+    color: #aaa;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.left-container {
+    width: 50%;
+    padding-right: 20px; 
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+.left-container img {
+    width: 100%;
+    height: auto;
+}
+
+.right-container {
+    width: 50%;
+    padding-left: 20px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: left; 
+}
+
+.right-container p {
+    margin: 5px 0; 
+}
