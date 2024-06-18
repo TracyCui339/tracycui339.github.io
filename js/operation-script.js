@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Load and display the operation chart if on the operation page
+
     if (document.getElementById('operationChart')) {
         fetch('/data/operation.csv')
             .then(response => response.text())
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 lines.forEach(line => {
                     const [time, rpm, speed] = line.split(',');
-                    labels.push(time); // Only take the time part for labels
+                    labels.push(time); 
                     rpmData.push(parseFloat(rpm));
                     speedData.push(parseFloat(speed));
                 });
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                 label: 'Speed (knots)',
                                 data: speedData,
                                 borderColor: 'rgba(54, 162, 235, 1)',
-                                backgroundColor: 'rgba(54, 162, 235, 0.2)', // Area fill
+                                backgroundColor: 'rgba(54, 162, 235, 0.2)', 
                                 yAxisID: 'y-axis-speed',
                                 fill: true,
                                 borderWidth: 1,
@@ -110,12 +110,12 @@ document.addEventListener("DOMContentLoaded", () => {
         var interpolating = false;
         var animationFrame;
 
-        var customIcon = L.icon({
-            iconUrl: '/images/custom-icon.png',
-            iconSize: [64, 32],
-            iconAnchor: [32, 16],
-            popupAnchor: [0, -16]
-        });
+        //var customIcon = L.icon({
+        //    iconUrl: '/images/custom-icon.png',
+        //    iconSize: [64, 32],
+        //    iconAnchor: [32, 16],
+        //    popupAnchor: [0, -16]
+        //});
 
         function loadCSV() {
             fetch('/data/gps-short.csv')
@@ -148,9 +148,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 map.removeLayer(marker);
             }
 
-            polylineBackground = L.polyline([], { color: '#A0A0FF', weight: 8 }).addTo(map); // Background polyline with lighter color
-            polylineForeground = L.polyline([], { color: '#5932EA', weight: 4 }).addTo(map); // Foreground polyline with main color
-            marker = L.marker(routeData[0].slice(0, 2), { icon: customIcon }).addTo(map);
+            polylineBackground = L.polyline([], { color: '#509DD2', weight: 8 }).addTo(map); // Background polyline with lighter color
+            polylineForeground = L.polyline([], { color: '#2981CA', weight: 4 }).addTo(map); // Foreground polyline with main color
+            marker = L.marker(routeData[0].slice(0, 2)).addTo(map);
             marker.on('click', function() {
                 marker.bindPopup(createPopupContent(routeData[index - 1])).openPopup();
             });
@@ -244,7 +244,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         loadCSV();
 
-        // Ensure map is resized properly
         function resizeMap() {
             map.invalidateSize();
         }
