@@ -1,0 +1,277 @@
+/* LCA Header Section */
+.lca-header {
+    padding: 120px 0 60px;
+    background-color: #002B6B;
+    margin-top: 13vh;
+}
+
+.lca-header .subtitle {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.lca-header h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.lca-header p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 800px;
+    line-height: 1.6;
+}
+
+/* What is LCA Section */
+.what-is-lca {
+    padding: 60px 0;
+    background-color: white;
+}
+
+.lca-content {
+    display: block;
+}
+
+.lca-info h2 {
+    font-size: 2.2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+.definition {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+    max-width: 900px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.lca-features {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.feature-item {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    min-height: 100px;
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.feature-item img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    margin-bottom: 6px;
+}
+
+.feature-text {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.feature-text h3 {
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+}
+
+.feature-text p {
+    font-size: 0.75rem;
+    line-height: 1.3;
+    margin-top: auto;
+    text-align: left;
+}
+
+.lca-image {
+    max-width: 250px;
+    margin-left: 0;
+    margin-top: -60px;
+    transform: translateX(-40px);
+}
+
+.lca-image img {
+    width: 100%;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* Standards Section */
+.lca-standards {
+    padding: 80px 0;
+    background-color: #f5f9ff;
+}
+
+.standards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.standard-card, .database-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.standard-card:hover, .database-card:hover {
+    transform: translateY(-5px);
+}
+
+.standard-card h3, .database-card h3 {
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.standard-card p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Database Section */
+.lca-database {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.database-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+}
+
+/* Analysis Section */
+.lca-analysis {
+    padding: 80px 0;
+    background-color: #f5f9ff;
+}
+
+.scope-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Section Titles */
+section h2 {
+    font-size: 2.2rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+.section-desc {
+    color: #666;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* Scope Cards */
+.scope-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: left;
+    transition: transform 0.3s;
+}
+
+.scope-card:hover {
+    transform: translateY(-5px);
+}
+
+.scope-card h3 {
+    color: #54575a;
+    font-size: 0.7rem;
+    margin-bottom: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.scope-card .scope-title {
+    color: #0A3671;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.scope-card p {
+    color: #54575a;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin: 0;
+    padding-left: 0;
+}
+
+
+.scope-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+.scope-card li {
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 8px;
+    color: #54575a;
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+.scope-card li::before {
+    content: "•";
+    color: #0A3671;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
+.scope-card li.example {
+    font-style: italic;
+    margin-top: 12px;
+}
+
+@media (min-width: 1200px), (max-width: 768px) {
+    .lca-features {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}

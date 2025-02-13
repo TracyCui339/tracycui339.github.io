@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LCA Tool - MESD</title>
+    <link rel="stylesheet" href="/static/css/index.css">
+    <link rel="stylesheet" href="/static/css/tool.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <section class="nav-bar">
+        <div class="container nav-container">
+            <div class="nav-logo">
+                <img src="/static/images/mesd-icon1.png" alt="MESD Logo">
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="lca.html">LCA Overview</a></li>
+                    <li><a href="tool.html" class="active">LCA Tool</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Title Section -->
+    <section class="tool-header">
+        <div class="container">
+            <h1>LCA Calculation Example</h1>
+            <p>Visualize your carbon emissions across each stage of production and make data-driven decisions for a more sustainable future.</p>
+        </div>
+    </section>
+
+    <!-- Tool Introduction Section -->
+    <section class="tool-intro">
+        <div class="container">
+            <div class="intro-content">
+                <div class="intro-text">
+                    <h2>Our Approach</h2>
+                    <p>Clear and actionable analysis of carbon emissions for each production stage, empowering sustainable choices.</p>
+                    <ul>
+                        <li>Visualize emissions across all lifecycle stages</li>
+                        <li>Identify key contributors to CO2 footprint</li>
+                        <li>Support data-driven optimization strategies</li>
+                    </ul>
+                </div>
+                <div class="intro-image">
+                    <img src="/static/images/lca-intro.png" alt="LCA Tool Introduction">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LCA Visualization Section -->
+    <section class="lca-visualization">
+        <div class="container">
+            <div class="flow-chart">
+                <div class="flow-header">
+                    <h2 class="flow-title">Sample LCA Calculation</h2>
+                </div>
+                <div class="stages-container">
+                    <div class="stage" data-group="1">
+                        <h3>Hull Structure</h3>
+                    </div>
+                    <div class="stage" data-group="2">
+                        <h3>Propulsion</h3>
+                    </div>
+                    <div class="stage" data-group="3">
+                        <h3>Electric</h3>
+                    </div>
+                    <div class="stage" data-group="4">
+                        <h3>Mechanical</h3>
+                    </div>
+                    <div class="stage" data-group="5">
+                        <h3>Outfit</h3>
+                    </div>
+                    <div class="stage" data-group="6">
+                        <h3>Safety</h3>
+                    </div>
+                    <div class="stage" data-group="7">
+                        <h3>Other Parts</h3>
+                    </div>
+                </div>
+
+                <div class="steps-container">
+                    
+                </div>
+
+                <div class="calculate-section">
+                    <button id="calculateBtn" class="calculate-btn">Calculate Emissions</button>
+                </div>
+                <div class="divider"></div>
+
+                <!-- Charts Container -->
+                <div class="charts-container">
+                    <div class="chart-box">
+                        <h3 class="chart-title">Total Emissions by Group</h3>
+                        <canvas id="emissionBarChart"></canvas>
+                    </div>
+                    <div class="chart-box">
+                        <h3 class="chart-title">Emission Distribution</h3>
+                        <canvas id="emissionPieChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Use Section -->
+    <section class="contact-section">
+        <div class="container">
+            <h2>How to Use</h2>
+            <p class="section-desc">Follow these steps to analyze your process emissions:</p>
+            <div class="steps-guide">
+                <div class="guide-item">
+                    <div class="step-number">1</div>
+                    <p>Click through each stage to view the detailed steps</p>
+                </div>
+                <div class="guide-item">
+                    <div class="step-number">2</div>
+                    <p>Input your process amounts for each step</p>
+                </div>
+                <div class="guide-item">
+                    <div class="step-number">3</div>
+                    <p>Click "Calculate Emissions" to see the total emissions and distribution charts</p>
+                </div>
+                <div class="guide-item">
+                    <div class="step-number">4</div>
+                    <p>Use the refresh button to reset all values and start over</p>
+                </div>
+            </div>
+            <div class="contact-prompt">
+                <p>Have questions? We're here to help!</p>
+                <a href="contact.html" class="contact-btn">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="/">Home</a>
+                <a href="/lca-overview">LCA Overview</a>
+                <a href="/lca-tool">LCA Tool</a>
+                <a href="/contact">Contact Us</a>
+            </div>
+            <div class="social-links">
+                <a href="#" target="_blank"><img src="/static/images/MESD.png" alt="MESD"></a>
+                <a href="#" target="_blank"><img src="/static/images/linkedin.png" alt="LinkedIn"></a>
+                <a href="#" target="_blank"><img src="/static/images/twitter.png" alt="Twitter"></a>
+                <a href="#" target="_blank"><img src="/static/images/youtube.png" alt="Youtube"></a>
+            </div>
+            <p class="copyright">© 2025 MESD. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/static/js/tool.js"></script>
+    <script>
+        Chart.register(ChartDataLabels);
+    </script>
+</body>
+</html>
