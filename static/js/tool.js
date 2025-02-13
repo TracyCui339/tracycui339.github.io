@@ -263,7 +263,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 },
                 {
                     name: 'Closures',
-                    defaultAmount: 1,
+                    defaultAmount: 23,
                     unit: 'kg',
                     formulas: {
                         co2: '248.497201/amount',
